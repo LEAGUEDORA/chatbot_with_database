@@ -32,6 +32,10 @@ Our overall learnings of this "Python for Engineers" course:
   5. Integration of SQLITE3 Data base in python (Assignment - 5)
   6. The most importtant concept "The Deployment" (Assignment - 3, 4, 5)
   
+ A small glmipse of my bot working: https://youtu.be/I02gwecZh3E
+ 
+ Heroku link for my website: https://pubgreportpage.herokuapp.com/    
+  
  We whole heartedly thank Abhinav Dayal sir, Sridevi mam and other faculty involved in this course for your proper guidance and support in this couse.😃😃
  
  Some of the screen shots of the bot and the webpage:
