@@ -1,0 +1,92 @@
+<html>
+    <head>
+        <title>LOGIN
+        </title>
+    </head>
+
+
+    <style>
+        .details{
+            margin-left: 52%;
+            transform: scale(1.1);
+            width: 180px;
+        }
+        .btn{
+            margin-left: 56%;
+            width: 55px;
+            height: 30px;
+            background-color: transparent;
+        }
+        .btn:hover{
+            transform: scale(1.2);
+            cursor: pointer;
+            background-color: #FFDE40;
+            transition: 0.5s;
+
+        }
+        .p{
+            margin-left: 51%;
+            color:#FFDE40;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-weight: bolder;
+        }
+        .back{
+        color: #FFDE40;
+        font-size: large;
+        /* border: 20px 20px solid #FFDE40; */
+        width: 100px;
+        height: 50px;
+        display: inline;
+        background-color: black;
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        cursor: pointer;
+        
+    }
+
+    .back:hover{
+        background-color: #FFDE40;
+        color: #242a2a;
+        transition: 0.5s;
+        display: inline;
+        padding-right: 10px;
+        transform: scale(1.2);
+    }
+    </style>
+
+    <body style="background-image: url(https://i.ibb.co/5MKxBqH/2020-pubg-4k-game-oi.jpg); background-repeat:no-repeat; background-size: cover;">
+        <div class="back" >   <button class="back" onclick="back()" >Back</button> </div>
+        <div class="details__" >
+        
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+            
+        <p class="p"> Enter your In game ID and Password <br>Id must be only 5 letters <br>Password is same as User name </p>
+        <input type="text" class="details" placeholder="UserId" id="uname" minlength="5" maxlength="5"  ><br><br>
+        <input type="password" class="details" placeholder="Password" id="pass"  ><br><br>
+
+        <button class="btn" onclick="check(document.getElementById('uname').value, document.getElementById('pass').value)"  > Login </button>
+    </div>
+
+    </body>
+
+    <script>
+        function check(uname, pass){
+            uname_str = String(uname);
+            uname = Number(uname);
+            pass = Number(pass);
+            if ((!(Number.isInteger(uname)))  ||   (uname != pass) || ( (uname < 10000 ) ) || (uname >=20000) ) {
+                alert("Check your creds\nId must be >= 10000 <= 19999\n Id and password must match");
+            }
+            else{
+                location.replace('/report.html/'+uname);
+            }
+            
+        }
+
+        function back(){
+
+            location.replace('/main.html');
+}
+
+    </script>
+   
+</html>
