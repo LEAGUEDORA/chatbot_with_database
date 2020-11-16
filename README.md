@@ -26,8 +26,8 @@ So we added two videos here inorder to show the proof that we did an AI chatterb
 
 Our overall learnings of this "Python for Engineers" course:
   1. To use object oriented programming (Assignment - 1)
-  2. Leanred HTML, CSS, Java Script from scratch (Assignment - 2)
-  3. Leanred the usage of Flask in Python and using simuntaneously with HTML(Assignemnt - 3)
+  2. Learned HTML, CSS, Java Script from scratch (Assignment - 2)
+  3. Learned the usage of Flask in Python and using simuntaneously with HTML(Assignemnt - 3)
   4. The Working of Regex, Chatter-bot, adding shortcut links to Python modules (Assignment - 4)
   5. Integration of SQLITE3 Data base in python (Assignment - 5)
   6. The most importtant concept "The Deployment" (Assignment - 3, 4, 5)
