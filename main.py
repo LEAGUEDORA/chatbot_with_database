@@ -5,11 +5,19 @@ from news import news
 
 import sqlite3
 
+from chatterbot import ChatBot
+from chatterbot.trainers import ChatterBotCorpusTrainer
+
 connect = sqlite3.connect('User_Data.db')
 
 
 app = Flask(__name__)
 
+english_bot = ChatBot("Chatterbot",storage_adapter="chatterbot.storage.SQLStorageAdapter")
+english_bot.storage.drop()
+trainer = ChatterBotCorpusTrainer(english_bot)
+# trainer.train("chatterbot.corpus.english")
+trainer.train("int\intents.yml")
 
 
 
@@ -26,21 +34,7 @@ def main():
 @app.route("/get")
 def get_bot_response_1():
     userText = request.args.get("msg") 
-    userText = userText.lower()
-    if 'report' in userText :
-        return "<a href = 'report.html'> Click here to report player </a>"
-    elif 'contact' in userText:
-        return "<a href = 'contact_us.html'> Click here to contact us </a>"
-    elif 'about' in userText :
-        return "<a href = 'about_us.html'> Click here to know about us  </a>"
-    elif 'profile' in userText  :
-        return "<a href = 'details.html'> Click here to search for a player </a>"
-    elif 'hi' in userText :
-        return "Hi"
-    elif ('name' in userText) or ('peru' in userText) :
-        return 'Carlo'
-    else:
-        return "I don't understand what you are saying"
+    return str(english_bot.get_response(userText))
         
 
 
